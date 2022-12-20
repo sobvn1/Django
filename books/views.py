@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 from . import models
 def books_views(request):
-    show = models.TvShow.objects.all()
+    show = models.BOOKS.objects.all()
     return render(request, 'books_show.html', {'show_objects': show})
 
 def books_detail(request, id):
