@@ -3,11 +3,11 @@ from django.db import models
 
 class BOOKS(models.Model):
     GENRE = (
+        ('Roman', 'Роман'),
         ('Detective', 'Детектив'),
         ('Horror', 'Хоррор'),
         ('Manga', 'Манга'),
         ('Comedy', 'Комедия'),
-        ('Document', 'Документальный'),
         ('Fantastic', 'Фантастика')
     )
     title = models.CharField(max_length=100)

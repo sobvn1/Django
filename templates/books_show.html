@@ -1,10 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>books</title>
 </head>
 <body>
-$END$
+<div>
+  <ul>
+    {% for i in show_object %}
+    <button><a href="http://127.0.0.1:8000/admin/">Админка</a></button>
+    <li>{{i.title}}</li>
+    <img src="{{i.image.url}}" alt="" width="200" height="200">
+    <br>
+    <button><a href="/books_detail/{{i.id}}"></a></button>
+      <hr>
+      <br>
+      {% endfor %}
+  </ul>
+</div>
+
 </body>
 </html>
